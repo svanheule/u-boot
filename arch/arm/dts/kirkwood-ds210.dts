@@ -91,6 +91,11 @@
 				};
 			};
 		};
+
+		sata@80000 {
+			/* Update pin controls to avoid conflicts with gpio-leds */
+			pinctrl-0 = <&pmx_sata0_act_21>, <&pmx_sata1_act_20>;
+		};
 	};
 
 	gpio-fan-150-32-35 {
@@ -100,13 +105,15 @@
 	gpio-leds-hdd-21-2 {
 		status = "okay";
 
-		hdd1-green {
-			linux,default-trigger = "ata1";
-		};
 
-		hdd2-green {
-			linux,default-trigger = "ata2";
-		};
+	/* ataX triggers not supported by Debian */
+//		hdd1-green {
+//			linux,default-trigger = "ata1";
+//		};
+//
+//		hdd2-green {
+//			linux,default-trigger = "ata2";
+//		};
 	};
 
 	regulators-hdd-31 {
