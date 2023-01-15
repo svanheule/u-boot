@@ -89,6 +89,8 @@
 					partition@3f0000 {
 						reg = <0x003f0000 0x00010000>;
 						label = "FIS directory";
+						compatible = "redboot-fis";
+						fis-index-block = <0>;
 						read-only;
 					};
 				};
