@@ -51,7 +51,7 @@
 					partition@0 {
 						reg = <0x00000000 0x00080000>;
 						label = "u-boot";
-						read-only;
+						//read-only;
 					};
 
 					/* This combines stock kernel and rd.gz partitions */
@@ -65,7 +65,7 @@
 					vendor: partition@3c0000 {
 						reg = <0x003c0000 0x00010000>;
 						label = "vendor";
-						read-only;
+						//read-only;
 						compatible = "nvmem-cells";
 						#address-cells = <1>;
 						#size-cells = <1>;
@@ -80,7 +80,7 @@
 					partition@3d0000 {
 						reg = <0x003d0000 0x00020000>;
 						label = "u-boot-env";
-						read-only;
+						//read-only;
 					};
 
 					partition@3f0000 {
