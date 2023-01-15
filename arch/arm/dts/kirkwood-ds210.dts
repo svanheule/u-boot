@@ -75,6 +75,9 @@
 						};
 
 						/* TODO device serial */
+						vendor_serial_20: serial@20 {
+							reg = <0x20 0x0c>;
+						};
 					};
 
 					partition@3d0000 {
